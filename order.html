@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--This is the head part-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--style.css is where the styles of which consists the body is found. -->
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna's Corner</title>
+</head>
+    <!--The body starts-->
+<body>
+    <!--order part starts-->
+    <header>
+        <a href="#"><img src="logo.png" class="logo"></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+    </header>
+    <div class="order" id="order">
+
+        <h3 class="sub-heading"> order now </h3>
+        <h1 class="heading"> free and fast </h1>
+
+        <form action="">
+
+            <div class="inputBox">
+                <div class="input">
+                    <span>your name</span>
+                    <input type="text" placeholder="enter your name">
+                </div>
+                    <div class="input">
+                        <span>your number</span>
+                        <input type="number" placeholder="enter your number">
+                    </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>your order</span>
+                    <input type="text" placeholder="enter food name">
+                </div>
+                    <div class="input">
+                        <span>additional food</span>
+                        <input type="test" placeholder="extra with food">
+                    </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Quantity</span>
+                    <input type="number" placeholder="number of orders">
+                </div>
+                    <div class="input">
+                        <span>date and time</span>
+                        <input type="datetime-local">
+                    </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>your address</span>
+                    <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
+                </div>
+                    <div class="input">
+                       <span>your message</span>
+                       <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+                    </div>
+            </div>
+
+            <input type="submit" value="order now" class="btn">
+
+
+        </form>
+
+    </div>
+    <!--order part ends-->
+
+    <!--script statements starts-->
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.Lunascorner').src = anything;
+        }
+    
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    
+       function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+       }
+    </script>
+    
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!--script statements ends-->
+</body>
+    <!--The body ends-->
+</html>

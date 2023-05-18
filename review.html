@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--This is the head part-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--style.css is where the styles of which consists the body is found. -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna's Corner</title>
+</head>
+    <!--The body starts-->
+<body>
+    <!--review part starts-->
+    <header>
+        <a href="#"><img src="logo.png" class="logo"></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+    </header>
+    <div class="review" id="review">
+
+        <h3 class="sub-heading"> customer's review </h3>
+        <h1 class="heading"> what they say </h1>
+
+        <div class="swiper-container review-slider">
+
+            <div class="swiper-wrapper">
+                
+                <div class="swiper slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="pic1.jpg" alt="">
+                        <div class="user-info">
+                            <h3>mary jane</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Their coffee is nice! Moreover, their great customer service added an extra touch of memorability to my first experience at the place.</p>
+                </div>
+                <div class="swiper slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="pic2.jpg" alt="">
+                        <div class="user-info">
+                            <h3>bryan paul</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>I always go here for a cup of coffee and a friendly atmosphere. The customer service is excellent, and the ambiance is kind and welcoming.</p>
+                </div>
+                <div class="swiper slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="pic3.jpg" alt="">
+                        <div class="user-info">
+                            <h3>leonora marie</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The baristas will lay it all out for you when it comes to the brewing methods and help you find your ideal coffee. It's the ideal spot to take a break and get a good cup of coffee.</p>
+                </div>
+            </div>
+        
+        </div>
+
+    </div>
+    <!--review part ends-->
+
+    <!--script statements starts-->
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.Lunascorner').src = anything;
+        }
+    
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    
+       function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+       }
+       </script>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!--script statements ends-->
+</body>
+    <!--The body ends-->
+</html>
