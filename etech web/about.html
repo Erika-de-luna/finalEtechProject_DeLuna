@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- favicon -->
+
+<!--remixicons -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- css -->
+<link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+<body>
+
+    <!-- header -->
+    <header>
+        <a href="#"><img src="images/logo.png" class="logo"></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+    </header>
+
+    <!-- main -->
+    <main class="main"></main>
+
+      
+
+        <!-- about section -->
+    <section class="about section" id="about">
+        <div class="about__container container grid">
+            <img src="images/circlebeans (1).png" alt="about image" class="about__img">
+           
+            <div class="about__data">
+                <span class="section__title">About<span class="us__title"> US</span></span> 
+                <h2 class="about__subtitle">
+                    <div>
+                        A perfectly made coffee can create a thousand stories.
+
+                    </div>
+                </h2>
+
+                <p class="about__description">
+                    In a city's heart, a cozy coffee shop thrived. Two friends, with a passion for coffee, 
+                    aimed to create perfection. Sourcing top-notch beans from the Philippines, they roasted them on-site, 
+                    guaranteeing freshness and flavor. Today, their mission lives on, as the shop prospers and welcomes all 
+                    with warmth and the perfect cup of joe.
+                </p>
+
+                <a href="menu.html" class="button">
+                    Order Now <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+        <!-- menu section -->
+    <section class="menu section" id="menu">
+        
+
+    </section>
+
+    </main>
+
+
+  <!--script statements starts-->
+  <script type="text/javascript">
+    function imgSlider(anything){
+        document.querySelector('.Lunascorner').src = anything;
+    }
+
+    function changeCircleColor(color){
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+    }
+
+   function toggleMenu(){
+        var menuToggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation')
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+   }
+   </script>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!--script statements ends-->    
+</body>
+</html>
