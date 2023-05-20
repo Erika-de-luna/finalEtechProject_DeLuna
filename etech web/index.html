@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--This is the head part-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--style.css is where the styles of which consists the body is found. -->
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunascorner</title>
+    <!-- favicon -->
+<link rel="shortcut icon" href="images/favicon (2).png">
+</head>
+    <!--The body starts-->
+<body>
+    <!--home section starts-->
+   <section>
+    <div class="circle"></div>
+    <header>
+        <a href="#"><img src="images/logo.png" class="logo"></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+    </header>
+    <div class="content">
+        <div class="textBox">
+            <h2>Pefectly brewed<br>just for <span>YOU</span></h2>
+            <p>Indulge in the Richness of a Brewing Masterpiece, <span>Anytime, Every Time!</span></p>
+            <a href="about.html">Learn More</a>
+        </div>
+            <div class="imgBox">
+                <img src="images/img1.png" class="Lunascorner">
+            </div>
+    </div>
+    <ul class="thumb">
+        <li><img src="images/thumb1.png" onclick="imgSlider('images/img1.png');changeCircleColor('#794d1f')"></li> 
+        <li><img src="images/thumb2.png" onclick="imgSlider('images/img2.png');changeCircleColor('#be7200')"></li> 
+        <li><img src="images/thumb3.png" onclick="imgSlider('images/img3.png');changeCircleColor('#be8a53')"></li> 
+    </ul>
+    <ul class="sci">
+        <li><a href="#"><img src="images/facebook.png"></a></li>
+        <li><a href="#"><img src="images/twitter.png"></a></li>
+        <li><a href="#"><img src="images/instagram.png"></a></li>
+    </ul>
+   </section>
+    <!--home section ends-->
+
+
+    <!--script statements starts-->
+   <script type="text/javascript">
+    function imgSlider(anything){
+        document.querySelector('.Lunascorner').src = anything;
+    }
+
+    function changeCircleColor(color){
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+    }
+
+   function toggleMenu(){
+        var menuToggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation')
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+   }
+   </script>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!--script statements ends-->
+</body>
+    <!--The body ends-->
+</html>

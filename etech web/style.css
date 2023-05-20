@@ -322,7 +322,7 @@ header ul li a:hover
 }
 .review .slide .user h3
 {
-    color: #333;
+    color: #333333;
     font-size: 1.5rem;
     padding-bottom: .5rem;
 }
@@ -359,7 +359,7 @@ header ul li a:hover
         width: 30px;
         height: 30px;
         cursor: pointer;
-        background: url(menu.png);
+        background: url(images/menu.png);
         background-size: 30px;
         background-position: center;
         background-repeat: no-repeat;
@@ -370,7 +370,7 @@ header ul li a:hover
     {
         position: fixed;
         right: 20px;
-        background: url(close.png);
+        background: url(images/close.png);
         background-size: 25px;
         background-position: center;
         background-repeat: no-repeat;
@@ -449,4 +449,21 @@ header ul li a:hover
     {
         width: 100%;
     }
+}
+
+/* ------------------------------------------------ */
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 0.6rem;
+    border-radius: .5rem;
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #b182575d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #916d4c98;
 }

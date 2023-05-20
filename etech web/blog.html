@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna's Corner</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon (2).png">
+    <!-- style link -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- box icons link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- header -->
+    <header>
+        <a href="#"><img src="images/logo1.png" class="logo"></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li><a class="active" href="blog.html">Blog</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+    </header>
+
+    <!-- blog section -->
+    <section class="blog" id="blog">
+        <div class="blog-text container">
+            <h2 class="blog-title">Luna's Corner Blog</h2>
+            <span class="blog-subtitle">"Café Notes: Where Passionate Palates Meet Inspirational Stories."</span>
+        </div>
+    </section>
+
+    <!-- post filter -->
+    <div class="post-filter container">
+        <span class="filter-item active-filter" data-filter='all'>All</span>
+        <span class="filter-item" data-filter='KC'>KC</span>
+        <span class="filter-item" data-filter='Erika'>Erika</span>
+    </div>
+
+    <!-- posts -->
+    <section class="post container">
+        <!-- post box 1 -->
+        <div class="post-box Erika">
+            <img src="images/4.png" alt="post-img">
+            <h2 class="category">Erika</h2>
+            <a href="https://docs.google.com/document/d/1XW-UNbr8ZRnJNAyquerat2V7a_V5LtfERwbutmLBmfs/edit?usp=sharing" class="post-title">
+                Desensitization is Just a Scroll Away! 
+            </a>
+            <span class="post-date">20 May 2023</span>
+            <p class="post-description">Blog 1 <br>
+                <a href="https://docs.google.com/document/d/1XW-UNbr8ZRnJNAyquerat2V7a_V5LtfERwbutmLBmfs/edit?usp=sharing">Click Here to Read</a>
+            </p>
+            <!-- profile -->
+            <div class="profile">
+                <img src="images/prof1.png" alt="" class="profile-img">
+                <span class="profile-name">Erika De Luna</span>
+            </div>
+            
+        </div>
+
+        <!-- post box 2 -->
+        <div class="post-box KC">
+            <img src="images/5.png" alt="post-img">
+            <h2 class="category">KC</h2>
+            <a href="https://docs.google.com/document/d/1JKjnhN29GZuc-o9y4R9Mv4xiPY8ryGY9wmJfjz2UMzQ/edit?usp=sharing" class="post-title">
+                Distinguishing “Content” from Harmful Media
+            </a>
+            <span class="post-date">20 May 2023</span>
+            <p class="post-description">Blog 2 <br>
+                <a href="https://docs.google.com/document/d/1JKjnhN29GZuc-o9y4R9Mv4xiPY8ryGY9wmJfjz2UMzQ/edit?usp=sharing">Click Here to Read</a>
+            </p>
+            <!-- profile -->
+            <div class="profile">
+                <img src="images/prof2.png" alt="" class="profile-img">
+                <span class="profile-name">KC Singzon</span>
+            </div>
+            
+        </div>
+
+        <!-- post box 3 -->
+        <div class="post-box KC">
+            <img src="images/6.png" alt="post-img">
+            <h2 class="category">KC</h2>
+            <a href="https://docs.google.com/document/d/10hGq2pu5tUtRzShBxLM3ll9-5ZSG63evosb4eiKQSOA/edit?usp=sharing" class="post-title">
+                Netiquette - Creating a Better Communication Space for Everyone 
+            </a>
+            <span class="post-date">20 May 2023</span>
+            <p class="post-description">Blog 3 <br>
+                <a href="https://docs.google.com/document/d/10hGq2pu5tUtRzShBxLM3ll9-5ZSG63evosb4eiKQSOA/edit?usp=sharing">Click Here to Read</a>
+            </p>
+            <!-- profile -->
+            <div class="profile">
+                <img src="images/prof2.png" alt="" class="profile-img">
+                <span class="profile-name">KC Singzon</span>
+            </div>
+            
+        </div>
+
+
+    </section>
+
+    <!-- JQuery link -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <!-- JS link -->
+    <script src="side.js"></script>
+    <!-- script starts -->
+        <script type="text/javascript">
+            function imgSlider(anything){
+                document.querySelector('.Lunascorner').src = anything;
+            }
+        
+            function changeCircleColor(color){
+                const circle = document.querySelector('.circle');
+                circle.style.background = color;
+            }
+        
+        function toggleMenu(){
+                var menuToggle = document.querySelector('.toggle');
+                var navigation = document.querySelector('.navigation')
+                menuToggle.classList.toggle('active')
+                navigation.classList.toggle('active')
+        }
+        </script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- script ends -->
+</body>
+</html>

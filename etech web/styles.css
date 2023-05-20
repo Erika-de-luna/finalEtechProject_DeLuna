@@ -1,3 +1,4 @@
+/* Project Setup */
 /* import font */
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
@@ -91,7 +92,6 @@ img {
     height: auto;
 }
 
-
 /* reusable css classes */
 .container {
     max-width: 1024px;
@@ -112,6 +112,7 @@ img {
     font-weight: 600;
     font-family: var(--title-font);
     margin-bottom: 1.5rem;
+    margin-top: 5rem;
 }
 
 .about__subtitle {
@@ -126,13 +127,12 @@ img {
     text-align: center;
 }
 
-
 /* for animation scroll */
 .main {
     overflow: hidden;  
 } 
 
-
+/* ------------------------------------------------ */
 /* header styles */
 header
 {
@@ -181,7 +181,7 @@ header ul li a:hover
 }
 
 
-
+/* ------------------------------------------------ */
 /* about styles */
 .about {
     position: relative;
@@ -230,7 +230,6 @@ header ul li a:hover
 }
 
 
-
 /* button */
 .button {
     display: inline-flex;
@@ -258,6 +257,226 @@ header ul li a:hover
 }
 
 
+/* ------------------------------------------------ */
+/* menu styles */
+
+.menu__container {
+    padding-top: 4rem;
+    grid-template-columns: 250px;
+    justify-content: center;
+    row-gap: 5.5rem;
+}
+
+.menu__span {
+    color: var(--cream-color);
+}
+
+.menu__card {
+    position: relative;
+    background-color: hsl(39, 76%, 92%);
+    padding: 7rem 2rem 1.5rem;
+    box-shadow: 0px 8px 20px hsla(35, 18%, 32%, 0.164);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.menu__img {
+    width: 70px;
+    position: absolute;
+    inset: 0;
+    top: -2.5rem;
+    margin: 0 auto;
+    transition: transform .4s;
+}
+
+.menu__name {
+    font-size: var(--h3-font-size);
+    font-family: var(--title-font);
+    margin-bottom: .25rem;
+}
+
+.menu__description {
+    display: block;
+    font-size: var(--smaller-font-size);
+    margin-bottom: 1rem;
+}
+
+.menu__price {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    color: var(--title-color)
+}
+
+.menu__button {
+    display: flex;
+    background-color:  hsla(0, 0%, 0%, 0.39);
+    padding: 6px;
+    border-radius: 50%;
+    border: var(--normal-font-size);
+    outline: none;
+    color: white;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 20px hsla(51, 65%, 20%, 0.2);
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.menu__button:hover {
+    background-color: var(--first-color-alt);
+}
+
+.menu__card:hover .menu__img {
+    transform: translateY(-.25rem);
+}
+
+
+/* ------------------------------------------------ */
+/* blog styles */
+
+
+.blog {
+    width: 100%;
+    min-height: 440px;
+    background-color:white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    outline: solid .2px rgb(196, 196, 196);
+}
+
+.blog-text {
+    color:  hsl(24, 13%, 15%);
+    text-align: center;
+}
+
+.blog-title {
+    font-size: 3.5rem;
+}
+
+.blog-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color:  hsl(28, 48%, 54%);
+}
+
+/* post filter */
+.post-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-top: .5rem !important;
+}
+
+.filter-item {
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.active-filter {
+    background: #794d1f;
+    color: white; 
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* posts */
+.post {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,auto));
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.post-box {
+    background: var(--bg-color);
+    box-shadow: 0 4px 14px hsla(34, 27%, 35%, 0.329);
+    padding: 15px;
+    border-radius: 0.5rem;
+}
+
+.post-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+}
+
+.category {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color:#794d1f;
+}
+
+.post-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    /* to remain title in 2 line */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.post-date {
+    display: flex;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.post-description {
+    font-size: 0.9rem; 
+    line-height: 1.5rem;
+    margin: 5px 0 10px;
+      /* to remain title in 3 line */
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px;
+}
+
+
+/* ------------------------------------------------ */
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 0.6rem;
+    border-radius: .5rem;
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #b182575d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #916d4c98;
+}
+
+
+/* ------------------------------------------------ */
 /* BREAKPOINTS */
 /* for small devices */
 @media screen and (max-width:340px) {
@@ -272,6 +491,13 @@ header ul li a:hover
     .section__title {
         font-size: 2rem;
     }
+    
+}
+
+@media screen and (min-width: 451px) {
+   .menu__img {
+    width: 90px;
+   }
 }
 
 /* for medium devices */
@@ -279,6 +505,12 @@ header ul li a:hover
     .about__container {
         grid-template-columns: .7fr;
         justify-content: center;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .menu__container {
+        grid-template-columns: repeat(2, 250px);
     }
 }
 
@@ -312,19 +544,50 @@ header ul li a:hover
         top: 0rem;
         right: -2rem;
     }
+
+    .menu__container {
+        grid-template-columns: repeat(3, 262px);
+        column-gap: 3.5rem;
+        padding-block: 6rem 4rem;
+    }
+
+    .menu__card {
+        padding: 7.5rem 2rem 2rem;
+        border-radius: 1.5rem;
+    }
+
+    .menu__img {
+        width: 105px;
+    }
+
+    .menu__button {
+    bottom: 2rem;
+    }
 }
 
 @media screen and (min-width: 1064px) {
     .container {
         margin-inline: auto;
     }
+}
 
+@media screen and (min-width: 1500px) {
+    section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    }
 }
 
 
 
+/* ------------------------------------------------ */
 /* FROM KC HEADER */
-
 :root
 {
     --brown: #291509;
@@ -442,3 +705,4 @@ header ul li a:hover
     }
 }
 }
+
